@@ -18,7 +18,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """ returns the with of the rectangle as a 
+        """ returns the with of the rectangle as a
         private variable"""
         return self.__width
 
@@ -35,14 +35,14 @@ class Rectangle:
 
         if width < 0:
             raise ValueError("width must be >= 0")
-        elif not isinstance(width, int):
+        elif not isinstance(width, int) and not isinstance(width, float):
             raise TypeError("width must be an integer")
         else:
             self.__width = width
 
     @property
     def height(self):
-        """ returns the height of the rectangle as a 
+        """ returns the height of the rectangle as a
         private variable"""
         return self.__height
 
@@ -59,7 +59,7 @@ class Rectangle:
 
         if height < 0:
             raise ValueError("height must be >= 0")
-        elif not isinstance(height, int):
+        elif not isinstance(height, int) and not isinstance(height, float):
             raise TypeError("height must be an integer")
         else:
             self.__height = height
