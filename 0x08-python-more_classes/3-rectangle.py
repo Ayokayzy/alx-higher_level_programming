@@ -74,11 +74,13 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self) -> str:
+        """presents a diagram of the rectangle defined for an object"""
         if self.__width == 0 or self.__height == 0:
             return ""
         rect = ""
         for i in range(self.__height):
             for j in range(self.__width):
                 rect += "#"
-            rect += "\n"
+            if column < self.__height - 1:
+                rect += "\n"
         return rect
