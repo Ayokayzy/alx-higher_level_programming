@@ -33,12 +33,12 @@ class Rectangle:
             ValueError - width must be >= 0
         """
 
+        if not isinstance(width, int) and not isinstance(width, float):
+            raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be >= 0")
-        elif not isinstance(width, int) and not isinstance(width, float):
-            raise TypeError("width must be an integer")
-        else:
-            self.__width = width
+
+        self.__width = width
 
     @property
     def height(self):
@@ -57,12 +57,12 @@ class Rectangle:
             ValueError - height must be >= 0
         """
 
+        if not isinstance(height, int) and not isinstance(height, float):
+            raise TypeError("height must be an integer")
         if height < 0:
             raise ValueError("height must be >= 0")
-        elif not isinstance(height, int) and not isinstance(height, float):
-            raise TypeError("height must be an integer")
-        else:
-            self.__height = height
+
+        self.__height = height
 
     def area(self):
         """returns the area of the rctangle"""
