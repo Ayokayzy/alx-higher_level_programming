@@ -63,4 +63,3 @@ class Rectangle:
             raise TypeError("height must be an integer")
 
         self.__height = value
-
