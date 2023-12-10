@@ -23,22 +23,22 @@ class Rectangle:
         return self.__width
 
     @width.setter
-    def width(self, width):
+    def width(self, value):
         """sets the with of the rectangle to a private variable
         Args:
-            width - the width of the variable
+            value - the width of the variable
 
         Exceptions:
             TypeError - width must be an integer
             ValueError - width must be >= 0
         """
 
-        if width < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
-        elif not isinstance(width, int) and not isinstance(width, float):
+        elif not isinstance(value, int) and not isinstance(value, float):
             raise TypeError("width must be an integer")
         else:
-            self.__width = width
+            self.__width = value
 
     @property
     def height(self):
@@ -47,19 +47,20 @@ class Rectangle:
         return self.__height
 
     @height.setter
-    def height(self, height):
+    def height(self, value):
         """sets the with of the rectangle to a private variable
         Args:
-            height - the height of the variable
+            value - the height of the variable
 
         Exceptions:
             TypeError - height must be an integer
             ValueError - height must be >= 0
         """
 
-        if height < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
-        elif not isinstance(height, int) and not isinstance(height, float):
+        elif not isinstance(value, int) and not isinstance(value, float):
             raise TypeError("height must be an integer")
         else:
-            self.__height = height
+            self.__height = value
+
