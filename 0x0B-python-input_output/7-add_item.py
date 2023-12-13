@@ -6,6 +6,10 @@ save_to_json_file = (__import__("5-save_to_json_file")).save_to_json_file
 load_from_json_file = (__import__("6-load_from_json_file")).load_from_json_file
 
 filename = "add_item.json"
-my_list_1 = load_from_json_file(filename)
-my_list = sys.argv[1:] + my_list_1
+try:
+    items = load_from_json_file(filename)
+except FileNotFoundError:
+    items = []
+
+my_list = items +  sys.argv[1:]
 save_to_json_file(my_list, filename)
