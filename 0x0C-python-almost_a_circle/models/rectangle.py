@@ -29,15 +29,15 @@ class Rectangle(Base):
             width: width of the rectangle
 
         Exceptions:
-            TypeError - width should be an integer
-            ValueError - width should be greater than 0
+            TypeError - width must be an integer
+            ValueError - width must be > 0
         """
 
         if not isinstance(width, int):
-            raise TypeError("width should be an integer")
+            raise TypeError("width must be an integer")
 
         if width <= 0:
-            raise ValueError("width should be greater than 0")
+            raise ValueError("width must be > 0")
 
         self.__width = width
 
@@ -54,15 +54,15 @@ class Rectangle(Base):
             height: height of the rectangle
 
         Exceptions:
-            TypeError - height should be an integer
-            ValueError - height should be greater than 0
+            TypeError - height must be an integer
+            ValueError - height must be > 0
         """
 
         if not isinstance(height, int):
-            raise TypeError("height should be an integer")
+            raise TypeError("height must be an integer")
 
         if height <= 0:
-            raise ValueError("height should be greater than 0")
+            raise ValueError("height must be > 0")
         self.__height = height
 
     @property
@@ -78,15 +78,15 @@ class Rectangle(Base):
             x: position of the rectangle on the x axis
 
         Exceptions:
-            TypeError - x should be an integer
-            ValueError - x should be >= 0
+            TypeError - x must be an integer
+            ValueError - x must be >= 0
         """
 
         if not isinstance(x, int):
-            raise TypeError("x should be an integer")
+            raise TypeError("x must be an integer")
 
         if x < 0:
-            raise ValueError("x should be >= 0")
+            raise ValueError("x must be >= 0")
         self.__x = x
 
     @property
@@ -102,13 +102,13 @@ class Rectangle(Base):
             y: position of the rectangle on the y axis
 
         Exceptions:
-            TypeError - y should be an integer
-            ValueError - y should be >= 0
+            TypeError - y must be an integer
+            ValueError - y must be >= 0
         """
 
         if not isinstance(y, int):
-            raise TypeError("y should be an integer")
+            raise TypeError("y must be an integer")
 
         if y < 0:
-            raise ValueError("y should be >= 0")
+            raise ValueError("y must be >= 0")
         self.__y = y
