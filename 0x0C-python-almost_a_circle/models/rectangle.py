@@ -135,3 +135,29 @@ class Rectangle(Base):
                 rect += "#"
             rect += "\n"
         print(rect, end="")
+
+    def update(self, *args):
+        """assigns an argument to each attribute:
+           1st argument should be the id attribute
+           2nd argument should be the width attribute
+           3rd argument should be the height attribute
+           4th argument should be the x attribute
+           5th argument should be the y attribute
+        """
+        if args and len(args) != 0:
+            i = 0
+            for arg in args:
+                if i == 0:
+                    if args is None:
+                        self.__init__(self.id, self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif i == 1:
+                    self.width = arg
+                elif i == 2:
+                    self.height = arg
+                elif i == 3:
+                    self.x = arg
+                elif i == 4:
+                    self.y = arg
+                i += 1
