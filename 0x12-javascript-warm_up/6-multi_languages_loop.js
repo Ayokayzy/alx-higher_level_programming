@@ -1,11 +1,7 @@
 #!/usr/bin/node
 
-if (process.argv[2]) {
-  if (Number(process.argv[2]) > 0) {
-    for (i = 0; i < Number(process.argv[2]); i++) {
-	    console.log('C is fun');
-    }
-  }
-} else {
-  console.log('Missing number of occurrences');
+const arr = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+
+for (i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
 }
