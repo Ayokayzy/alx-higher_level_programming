@@ -2,7 +2,6 @@
 
 const argv = process.argv;
 let square = '';
-
 if (isNaN(argv[2]) || !argv[2]) {
   console.log('Missing size');
 } else {
