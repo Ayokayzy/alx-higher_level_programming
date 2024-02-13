@@ -8,7 +8,7 @@ if (isNaN(argv[2]) || !argv[2]) {
 } else {
   for (let i = 0; i < Number(argv[2]); i++) {
     for (let j = 0; j < Number(argv[2]); j++) {
-      square += 'x';
+      square += 'X';
     }
     if (i + 1 !== Number(argv[2])) square += '\n';
   }
