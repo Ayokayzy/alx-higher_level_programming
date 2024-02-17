@@ -21,7 +21,6 @@ def main():
     db_port = 3306
 
     try:
-        print("here 1")
         db = MySQLdb.connect(host=db_host, port=db_port,
                              user=db_user, passwd=db_password,
                              db=db_db, charset="utf8")
