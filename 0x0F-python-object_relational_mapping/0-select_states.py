@@ -5,6 +5,7 @@
 from sys import argv
 import MySQLdb
 
+
 def main():
     """
     lists all states from the database hbtn_0e_0_usa
@@ -22,8 +23,8 @@ def main():
     try:
         print("here 1")
         db = MySQLdb.connect(host=db_host, port=db_port,
-                            user=db_user, password=db_password,
-                            db=db_db, charset="utf8")
+                             user=db_user, password=db_password,
+                             db=db_db, charset="utf8")
         cur = db.cursor()
         cur.execute('SELECT id, name FROM states ORDER BY id ASC')
         states = cur.fetchall()
@@ -35,6 +36,7 @@ def main():
         db.close()
     except Exception:
         pass
+
 
 if __name__ == "__main__":
     main()
