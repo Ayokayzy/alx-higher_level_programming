@@ -23,7 +23,7 @@ def main():
     try:
         print("here 1")
         db = MySQLdb.connect(host=db_host, port=db_port,
-                             user=db_user, password=db_password,
+                             user=db_user, passwd=db_password,
                              db=db_db, charset="utf8")
         cur = db.cursor()
         cur.execute('SELECT id, name FROM states ORDER BY id ASC')
