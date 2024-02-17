@@ -1,0 +1,6 @@
+.venv
+venv
+.pyc
+./orm_map
+./orm_map/*
+*.sql
