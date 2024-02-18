@@ -21,14 +21,14 @@ def main():
     argument = argv[4]
     db_port = 3306
 
-    query = "SELECT id, name FROM states WHERE name = '{}'"
-    query += "ORDER by id".format(argument)
+    query = "SELECT id, name FROM states WHERE name = '{}' "
+    query += "ORDER by id"
     try:
         db = MySQLdb.connect(host=db_host, port=db_port,
                              user=db_user, passwd=db_password,
                              db=db_db, charset="utf8")
         cur = db.cursor()
-        cur.execute(query)
+        cur.execute(query.format(argument))
         states = cur.fetchall()
 
         for row in states:
