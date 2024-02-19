@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-7-model_state_fetch_all.py
+9-model_state_filter_a.py
 """
 from sys import argv
 from model_state import State, Base
@@ -20,11 +20,9 @@ if __name__ == '__main__':
         Session = sessionmaker(bind=engine)
         session = Session()
 
-        state = session.query(State.id, State.name).order_by(State.id).first()
-        if state:
-            print("{}: {}".format(state.id, state.name))
-        else:
-            print("Nothing")
+        for id, name in session.query(State.id, State.name).\
+                filter(State.name.ilike('%a%')).order_by(State.id):
+            print("{}: {}".format(id, name))
         session.close()
     except Exception:
         pass

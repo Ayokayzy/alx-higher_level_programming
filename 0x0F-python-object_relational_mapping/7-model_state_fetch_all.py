@@ -20,8 +20,9 @@ if __name__ == '__main__':
         Session = sessionmaker(bind=engine)
         session = Session()
 
-        for id, name in session.query(State.id, State.name).order_by(State.id).all():
+        for id, name in session.query(State.id, State.name).\
+                order_by(State.id).all():
             print("{}: {}".format(id, name))
         session.close()
-    except:
+    except Exception:
         pass
