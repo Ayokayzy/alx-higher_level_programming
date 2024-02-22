@@ -26,7 +26,7 @@ def main():
                              db=db_db, charset="utf8")
         cur = db.cursor()
         cur.execute("SELECT id, name FROM states WHERE \
-name LIKE 'N%' ORDER BY id ASC")
+name LIKE UPPER('N%') ORDER BY id ASC")
         states = cur.fetchall()
 
         for row in states:
