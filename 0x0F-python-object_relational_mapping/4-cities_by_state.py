@@ -20,7 +20,8 @@ def main():
     db_db = argv[3]
     db_port = 3306
 
-    query = """SELECT cities.id, cities.name, states.name FROM cities JOIN states ON cities.state_id = states.id ORDER BY id ASC"""
+    query = """SELECT cities.id, cities.name, states.name FROM cities \
+JOIN states ON cities.state_id = states.id ORDER BY id ASC"""
     try:
         db = MySQLdb.connect(host=db_host, port=db_port,
                              user=db_user, passwd=db_password,
