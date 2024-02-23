@@ -26,7 +26,8 @@ def main():
                              db=db_db, charset="utf8")
         cur = db.cursor()
         cur.execute("SELECT id, name FROM states WHERE \
-name REGEXP '^[N]' ORDER BY id ASC")
+CONVERT(name USING Latin1) \
+COLLATE Latin1_General_CS LIKE 'N%' ORDER BY id ASC")
         states = cur.fetchall()
 
         for row in states:
