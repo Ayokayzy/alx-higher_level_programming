@@ -21,7 +21,8 @@ def main():
     argument = argv[4]
     db_port = 3306
 
-    query = "SELECT id, name FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC"
+    query = "SELECT id, name FROM states WHERE name \
+LIKE BINARY '{}' ORDER BY id ASC"
     try:
         db = MySQLdb.connect(host=db_host, port=db_port,
                              user=db_user, passwd=db_password,
