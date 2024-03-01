@@ -1,3 +1,3 @@
 #!/bin/bash
-#sends a post request with a json file
-curl -H "Content-Type: application/json" -d @"$2" -sX POST "$1"
+# Docs 
+curl -sL -d "user_id=98" "0.0.0.0:5000/catch_me" -H "Origin:HolbertonSchool" -X PUT 
