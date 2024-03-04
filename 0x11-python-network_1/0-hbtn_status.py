@@ -12,7 +12,7 @@ def main():
 
     req = urllib.request.Request(
         "https://alx-intranet.hbtn.io/status")
-    try
+    try:
         with urllib.request.urlopen(req) as response:
             status = response.read()
             res = "Body response:\n\
