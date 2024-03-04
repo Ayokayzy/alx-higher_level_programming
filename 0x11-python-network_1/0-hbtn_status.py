@@ -12,13 +12,16 @@ def main():
 
     req = urllib.request.Request(
         "https://alx-intranet.hbtn.io/status")
-    with urllib.request.urlopen(req) as response:
-        status = response.read()
-        res = "Body response:\n\
+    try
+        with urllib.request.urlopen(req) as response:
+            status = response.read()
+            res = "Body response:\n\
 \t- type: {}\n\
 \t- content: {}\n\
 \t- utf8 content: {}".format(type(response.read()), status, response.msg)
-        print(res)
+            print(res)
+    except Exception:
+        pass
 
 
 if __name__ == "__main__":
