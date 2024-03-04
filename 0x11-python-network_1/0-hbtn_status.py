@@ -18,7 +18,7 @@ def main():
             res = "Body response:\n\
 \t- type: {}\n\
 \t- content: {}\n\
-\t- utf8 content: {}".format(type(response.read()), status, response.msg)
+\t- utf8 content: {}".format(type(response.read()), status, response.decode('utf-8'))
             print(res)
     except Exception:
         pass
