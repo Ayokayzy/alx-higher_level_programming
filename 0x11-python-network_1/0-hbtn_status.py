@@ -15,9 +15,9 @@ def main():
     with urllib.request.urlopen(req) as response:
         status = response.read()
         res = "Body response:\n\
-	- type: {}\n\
-	- content: {}\n\
-	- utf8 content: {}".format(type(response.read()), status, response.msg)
+\t- type: {}\n\
+\t- content: {}\n\
+\t- utf8 content: {}".format(type(response.read()), status, response.msg)
         print(res)
 
 
