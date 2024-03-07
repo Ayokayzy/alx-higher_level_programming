@@ -11,7 +11,7 @@ def main():
     values = {'email': argv[2]}
 
     data = parse.urlencode(values).encode('ascii')
-    req =  request.Request(url, data)
+    req = request.Request(url, data)
     try:
         with request.urlopen(req) as response:
             page = response.read()
