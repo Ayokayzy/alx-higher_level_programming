@@ -19,5 +19,5 @@ if __name__ == "__main__":
             print("{}: {}".format(res[i]["sha"],
                                   res[i].get("commit").
                                   get("author").get("name")))
-    except Exception:
-        print(Exception)
+    except IndexError:
+        pass
