@@ -19,7 +19,7 @@ if __name__ == "__main__":
         "X-GitHub-Api-Version": "2022-11-28"
     }
     try:
-        r = requests.get(url, headers=headers);
+        r = requests.get(url, headers=headers)
         res = r.json()
         print(res.get("id"))
     except Exception:
