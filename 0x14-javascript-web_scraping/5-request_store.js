@@ -9,8 +9,7 @@ const file = process.argv[3];
 request(url, (err, res, body) => {
   if (err) return;
 
-  fs.writeFile(file, body, (err) => {
+  fs.writeFile(file, body, { encoding: 'utf-8' }, (err) => {
     if (err) return console.log(err);
-  });
-  console.log(body);
-});
+  })
+})
