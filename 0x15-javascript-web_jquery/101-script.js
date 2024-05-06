@@ -6,7 +6,7 @@ $(document).ready(function () {
   });
 
   $("#remove_item").on("click", function () {
-    var list = $(".gitmy_list");
+    var list = $(".my_list");
     if (list.children().length > 0) {
       list.children().last().remove();
     }
